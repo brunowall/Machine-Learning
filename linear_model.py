@@ -6,11 +6,12 @@ class SimpleLinearRegression:
     b1 = None
 
     def fit(self,X,y):
-       b1 = np.sum((X - np.mean(X)) * (y - np.mean(y))) / np.sum((X - np.mean(X)) ** 2) 
-       b0 = np.mean(y) - b1 * np.mean(X)
-
+        X  = X[:,0]
+        self.b1 = np.sum((X - np.mean(X)) * (y - np.mean(y))) / np.sum((X - np.mean(X)) ** 2) 
+        self.b0 = np.mean(y) - self.b1 * np.mean(X)
+        
     def predict(self,X):
-        y_pred = []
+        X = X[:,0]
         for x in X:
             y_pred.append((self.b0 + self.b1*x[0]))
             print(x[0])
