@@ -11,3 +11,10 @@ def rmse(y_true, y_pred):
 def mae(y_true, y_pred):
     count = sum(np.abs((y_true - y_pred)))
     return count/len(y_true)
+
+def accuracy(y_true,y_pred):
+    cont = 0
+    for i in range (y_pred.shape[0]):
+        y_true[i] == y_pred[i] ? cont+=1:continue
+    return (cont/y_pred.shape[0])
+
