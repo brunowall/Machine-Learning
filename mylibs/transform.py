@@ -15,4 +15,3 @@ def normalize(X):
         minn = np.min(X[:, i])
         X_norm[:, i] = (X[:, i] - minn) /  (np.max(X[:, i]) - minn)
     return X_norm
-
