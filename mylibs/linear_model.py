@@ -17,3 +17,9 @@ class SimpleLinearRegression:
             print(x[0])
 
         return y_pred
+
+class LogisticRegression:
+    b0 = None
+    b1 = None
+
+    def fit(X,y):
